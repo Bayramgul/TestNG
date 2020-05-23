@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 
 import com.syntax.utils.*;
-public class LoginPageElemements {
+public class LoginPageElemements extends CommonMethods {
 	//@FindBy() is an interface/tecnique help us to locate the element 
 	@FindBy(id="txtUsername")
 	public WebElement username;
@@ -20,11 +20,21 @@ public class LoginPageElemements {
 	
 	@FindBy(xpath=("//div[@id='divLogo']/img"))
 	public WebElement logoSyntax;
+	
 	@FindBy (id=("spanMessage"))
 	public WebElement errorMessage;
 	
 	
 	public LoginPageElemements(){//once we locate elements we Use PageFactory to initialize all elements on this page
 		PageFactory.initElements(BaseClass.driver, this);//avoid driver.findElement
+	}
+	public void LoginPageElements() {
+		
+		sendText(username, ConfigsReader.getProperty("username"));
+
+		WebElement password = driver.findElement(By.id("txtPassword"));
+		sendText(password, ConfigsReader.getProperty("password"));
+		WebElement loginBTN = driver.findElement(By.id("btnLogin"));
+		loginBTN.click();
 	}
 }

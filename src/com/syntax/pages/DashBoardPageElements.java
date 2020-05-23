@@ -11,10 +11,15 @@ public class DashBoardPageElements {
 	
 		@FindBy(id="welcome")
 		public WebElement welcome;
-		DashBoardPageElements(){
+		
+		@FindBy(id="menu_pim_viewPimModule")
+		public WebElement pim; 
+		
+		
+		
+		public DashBoardPageElements(){
 			PageFactory.initElements(BaseClass.driver, this);	
 		}
 		
 	
-
 }

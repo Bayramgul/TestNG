@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19741" started-at="2020-05-20T21:37:09 EDT" finished-at="2020-05-20T21:37:29 EDT">
+  <suite name="Default suite" duration-ms="22241" started-at="2020-05-23T13:30:13 EDT" finished-at="2020-05-23T13:30:35 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19741" started-at="2020-05-20T21:37:09 EDT" finished-at="2020-05-20T21:37:29 EDT">
-      <class name="com.class02.Task_2">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.class02.Task_2@72b6cbcc]" name="openBrowser" is-config="true" duration-ms="8244" started-at="2020-05-20T21:37:09 EDT" finished-at="2020-05-20T21:37:17 EDT">
+    <test name="Default test" duration-ms="22241" started-at="2020-05-23T13:30:13 EDT" finished-at="2020-05-23T13:30:35 EDT">
+      <class name="com.syntax.test.LoginPageTest_TestNG">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.syntax.test.LoginPageTest_TestNG@a7e666]" name="setUp" is-config="true" duration-ms="9941" started-at="2020-05-23T13:30:13 EDT" finished-at="2020-05-23T13:30:23 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="logoValidation()[pri:0, instance:com.class02.Task_2@72b6cbcc]" name="logoValidation" duration-ms="252" started-at="2020-05-20T21:37:17 EDT" finished-at="2020-05-20T21:37:17 EDT">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="InvalidPasswordAdminLogin()[pri:0, instance:com.syntax.test.LoginPageTest_TestNG@a7e666]" name="InvalidPasswordAdminLogin" duration-ms="2047" started-at="2020-05-23T13:30:23 EDT" finished-at="2020-05-23T13:30:25 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoValidation -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.class02.Task_2@72b6cbcc]" name="closeBrowser" is-config="true" duration-ms="196" started-at="2020-05-20T21:37:18 EDT" finished-at="2020-05-20T21:37:18 EDT">
+        </test-method> <!-- InvalidPasswordAdminLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.syntax.test.LoginPageTest_TestNG@a7e666]" name="tearDown" is-config="true" duration-ms="137" started-at="2020-05-23T13:30:25 EDT" finished-at="2020-05-23T13:30:25 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.class02.Task_2@72b6cbcc]" name="openBrowser" is-config="true" duration-ms="5418" started-at="2020-05-20T21:37:18 EDT" finished-at="2020-05-20T21:37:23 EDT">
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.syntax.test.LoginPageTest_TestNG@a7e666]" name="setUp" is-config="true" duration-ms="3775" started-at="2020-05-23T13:30:25 EDT" finished-at="2020-05-23T13:30:29 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="validLogin()[pri:0, instance:com.class02.Task_2@72b6cbcc]" name="validLogin" duration-ms="4584" started-at="2020-05-20T21:37:23 EDT" finished-at="2020-05-20T21:37:28 EDT">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="emptyUsername()[pri:0, instance:com.syntax.test.LoginPageTest_TestNG@a7e666]" name="emptyUsername" duration-ms="355" started-at="2020-05-23T13:30:29 EDT" finished-at="2020-05-23T13:30:30 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.class02.Task_2@72b6cbcc]" name="closeBrowser" is-config="true" duration-ms="723" started-at="2020-05-20T21:37:28 EDT" finished-at="2020-05-20T21:37:28 EDT">
+        </test-method> <!-- emptyUsername -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.syntax.test.LoginPageTest_TestNG@a7e666]" name="tearDown" is-config="true" duration-ms="81" started-at="2020-05-23T13:30:30 EDT" finished-at="2020-05-23T13:30:30 EDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.class02.Task_2 -->
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.syntax.test.LoginPageTest_TestNG@a7e666]" name="setUp" is-config="true" duration-ms="3215" started-at="2020-05-23T13:30:30 EDT" finished-at="2020-05-23T13:30:33 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validAdminLogin()[pri:0, instance:com.syntax.test.LoginPageTest_TestNG@a7e666]" name="validAdminLogin" duration-ms="2475" started-at="2020-05-23T13:30:33 EDT" finished-at="2020-05-23T13:30:35 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validAdminLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.syntax.test.LoginPageTest_TestNG@a7e666]" name="tearDown" is-config="true" duration-ms="84" started-at="2020-05-23T13:30:35 EDT" finished-at="2020-05-23T13:30:35 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.syntax.test.LoginPageTest_TestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

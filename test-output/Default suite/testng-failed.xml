@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.class02.Task_2">
+      <class name="com.syntax.test.LoginPageTest_TestNG">
         <methods>
-          <include name="logoValidation"/>
-          <include name="closeBrowser"/>
           <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="emptyUsername"/>
         </methods>
-      </class> <!-- com.class02.Task_2 -->
+      </class> <!-- com.syntax.test.LoginPageTest_TestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
