@@ -17,17 +17,19 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.syntax.pages.AddEmployee;
-import com.syntax.pages.DashBoardPageElements;
+import com.syntax.pages.AddEmployeePage;
+import com.syntax.pages.DashBoardPage;
 import com.syntax.pages.LoginPageElemements;
 import com.syntax.pages.ViewPersonalDetails;
 import com.syntax.utils.CommonMethods;
 import com.syntax.utils.ConfigsReader;
 
 public class AddEmployeeValidation extends CommonMethods {
-	private static String firstname =  "Gul";
+	private static String firstname = "Gul";
 //	private static String lastName ="Atageldiyeva";
-	//private static String photofile="/Users/Bayramgul/eclipse-workspace/TestNGBatchVI/screenshots/profile pic.jpg";
+	// private static String
+	// photofile="/Users/Bayramgul/eclipse-workspace/TestNGBatchVI/screenshots/profile
+	// pic.jpg";
 //	@BeforeClass
 //	public void openBrowser() {
 //		setUp();
@@ -39,7 +41,7 @@ public class AddEmployeeValidation extends CommonMethods {
 
 	@Test(priority = 1)
 	public void validLogin() {
-		//LoginPageElemements login = new LoginPageElemements();
+		// LoginPageElemements login = new LoginPageElemements();
 		sendText(login.username, ConfigsReader.getProperty("username"));
 		sendText(login.password, ConfigsReader.getProperty("password"));
 		WaitandClick(login.loginBTN);
@@ -47,29 +49,32 @@ public class AddEmployeeValidation extends CommonMethods {
 
 	@Test(priority = 2)
 	public void addEmployee() {
-		//DashBoardPageElements dash = new DashBoardPageElements();
+		validLogin();
+		// DashBoardPageElements dash = new DashBoardPageElements();
 		WaitandClick(dashboard.pim);
-		
-		AddEmployee add = new AddEmployee();
-		WaitandClick(add.addEmployee);
+
+		// AddEmployeePage add = new AddEmployeePage();
+		WaitandClick(addEmp.addEmployee);
 		sleep(2);
-		Assert.assertTrue(add.firstName.isDisplayed(), "firstName is not displayed");
-		Assert.assertTrue(add.lastName.isDisplayed(), "LastName is not displayed");
-		Assert.assertTrue(add.empId.isDisplayed());
-		Assert.assertTrue(add.photofile.isDisplayed());
-		
-		sendText(add.firstName,ConfigsReader.getProperty("firstname"));
+		Assert.assertTrue(addEmp.firstName.isDisplayed(), "firstName is not displayed");
+		Assert.assertTrue(addEmp.lastName.isDisplayed(), "LastName is not displayed");
+		Assert.assertTrue(addEmp.empId.isDisplayed());
+		Assert.assertTrue(addEmp.photofile.isDisplayed());
+
+		sendText(addEmp.firstName, ConfigsReader.getProperty("firstname"));
 		sleep(2);
-		sendText(add.lastName,ConfigsReader.getProperty("lastname"));
-		add.photofile.sendKeys(ConfigsReader.getProperty("photofile"));
+		sendText(addEmp.lastName, ConfigsReader.getProperty("lastname"));
+		addEmp.photofile.sendKeys(ConfigsReader.getProperty("photofile"));
 		sleep(1);
-		WaitandClick(add.btnSave);
+		WaitandClick(addEmp.btnSave);
 
 	}
+
 	@Test(priority = 3)
 	public void verifyEmp() {
-		ViewPersonalDetails detail=new ViewPersonalDetails();
-		String profileName=detail.profilePic.getText();
+		addEmployee();
+		ViewPersonalDetails detail = new ViewPersonalDetails();
+		String profileName = detail.profilePic.getText();
 		Assert.assertTrue(profileName.contains(firstname));
 		System.out.println("Employee successfully added");
 	}

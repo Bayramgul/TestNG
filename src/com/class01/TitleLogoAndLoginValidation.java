@@ -21,7 +21,7 @@ before: open browser, navigate to the website
 after: quit the browser
  */
 public class TitleLogoAndLoginValidation extends CommonMethods{
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true) 
 	public void openBrowserandGetUrl() {
 		setUp();
 	}

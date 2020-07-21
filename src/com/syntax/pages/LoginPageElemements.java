@@ -28,13 +28,10 @@ public class LoginPageElemements extends CommonMethods {
 	public LoginPageElemements(){//once we locate elements we Use PageFactory to initialize all elements on this page
 		PageFactory.initElements(BaseClass.driver, this);//avoid driver.findElement
 	}
-	public void LoginPageElements() {
+	public void login() {
 		
 		sendText(username, ConfigsReader.getProperty("username"));
-
-		WebElement password = driver.findElement(By.id("txtPassword"));
 		sendText(password, ConfigsReader.getProperty("password"));
-		WebElement loginBTN = driver.findElement(By.id("btnLogin"));
 		loginBTN.click();
 	}
 }
