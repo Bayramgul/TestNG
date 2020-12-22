@@ -286,13 +286,24 @@ public static void sleep (long millis) {
 		}
 		return windows;
 	}
-	public static void TakesScreenshot(String fileName) {
+//	public static void TakesScreenshot(String fileName) {
+//		TakesScreenshot ts = (TakesScreenshot) driver;
+//		File screen = ts.getScreenshotAs(OutputType.FILE);
+//		try {
+//			FileUtils.copyFile(screen, new File(fileName));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+	//}
+	public static void takesScreenshot(String fileName) {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File screen = ts.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(screen, new File(fileName));
+			FileUtils.copyFile(screen, new File("screenshots/HRMS/"+fileName+".png"));
 		} catch (IOException e) {
+			System.out.println("Couldn't take screenshot");
 			e.printStackTrace();
+		
 		}
 	}
 }

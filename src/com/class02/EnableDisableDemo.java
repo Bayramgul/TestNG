@@ -14,7 +14,8 @@ public class EnableDisableDemo {
 		System.out.println("I am inside second one");
 	}
 
-	@Test(enabled = false)//1) first way we just disabled this test case
+	@Test(enabled = false)//1) first way we just disabled this test case 
+	//(enabled = false->disabled, but we dont have disabled attribute
 	public void ThirdTest() {
 		System.out.println("I am inside third one");
 	}

@@ -12,7 +12,7 @@ public class BaseClass {
 
 	public static WebDriver driver;
 
-	@BeforeMethod // to make method run before every method
+	@BeforeMethod(alwaysRun=true) // to make method run before every method
 	public static WebDriver setUp() {// we changed the return type to WebDriver
 		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);// calling the readProperties method from
 																		// ConfigsReader class
@@ -38,7 +38,7 @@ public class BaseClass {
 		return driver;
 	}
 
-	@AfterMethod // to make method run before every method
+	@AfterMethod(alwaysRun=true) // to make method run before every method
 	public static void tearDown() {
 
 		if (driver != null) {

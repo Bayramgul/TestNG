@@ -24,6 +24,7 @@ public class ViewPersonalDetails {
 	
 	@FindBy(id="personal_cmbNation")
 	public WebElement nationalityDD;
+	
 	@FindBy(name="personal[optGender]")
 	public  List<WebElement> genderRadioGroup; 
 	
